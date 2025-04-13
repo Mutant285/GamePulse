@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ игр</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Топ игр по скачиваниям</h1>
+    <ul>
+        {% for game in games %}
+            <li>{{ game.name }} - {{ game.downloads }} скачиваний</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

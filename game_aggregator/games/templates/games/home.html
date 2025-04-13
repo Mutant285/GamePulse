@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Aggregator</title>
+</head>
+<body>
+    <h1>Игры</h1>
+    <ul>
+        {% for game in games %}
+            <li>{{ game.title }} - {{ game.release_date }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <ul>
+        {% for post in blog_posts %}
+            <li>{{ post.title }} - {{ post.created_at }}</li>
+            <p>{{ post.content }}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
