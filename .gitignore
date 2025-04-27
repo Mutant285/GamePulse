@@ -162,3 +162,20 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+/.idea/.gitignore
+/game_aggregator/games/migrations/0001_initial.py
+/game_aggregator/games/migrations/0002_game_icon_game_official_website_delete_blogpost.py
+/game_aggregator/games/migrations/0003_remove_game_description.py
+/game_aggregator/games/migrations/0004_remove_game_icon_remove_game_official_website_and_more.py
+/game_aggregator/games/migrations/__init__.py
+/game_aggregator/media/icons/cat_face_eyes_29447_1280x720.jpg
+/.idea/Game Aggregator.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/game_aggregator/media/icons/tabs.webp
+/.idea/vcs.xml
+/game_aggregator/media/icons/wp2295404.jpg
+/game_aggregator/media/icons/y450.webp
+/game_aggregator/media/icons/y450_H1zFF1q.webp
+/game_aggregator/media/icons/y450_W1UOCP5.webp
