@@ -3,5 +3,6 @@ from .views import game_list
 
 urlpatterns = [
     path('', game_list, name='game_list'),
+
 ]
 
