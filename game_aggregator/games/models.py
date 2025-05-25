@@ -15,7 +15,7 @@ class IntegerRangeField(models.IntegerField):
 
 
 class Game(models.Model):
-    name = models.CharField(max_length=100, null=False, default='Game')
+    name = models.CharField(max_length=100, null=False, default='Game', primary_key=True)
     downloads = models.IntegerField(null=False, default=0)
     genre = models.CharField(max_length=20, null=False, default='Жанр не определён')
     rating = IntegerRangeField(min_value=1, max_value=5)

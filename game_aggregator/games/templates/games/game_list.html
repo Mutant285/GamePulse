@@ -6,13 +6,119 @@
     <title>Топ игр</title>
      {% load static %}
     <link rel="stylesheet" href="{% static 'games/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                    <use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" _msttexthash="3261622" _msthash="84">Game Pulse</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page" _msttexthash="334776" _msthash="85">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" _msttexthash="984971" _msthash="86">Функции</a>
+                </li>
+<!--                <li class="nav-item"><a href="#" class="nav-link" _msttexthash="2945748" _msthash="87">Ценообразование</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="#" class="nav-link" _msttexthash="5263544" _msthash="88">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</a>-->
+<!--                </li> <-->
+<!--                li class="nav-item"><a href="#" class="nav-link" _msttexthash="631592" _msthash="89">Около</a></li>-->
+            </ul>
+        </header>
+    </div>
+
     <h1>Топ игр по скачиваниям</h1>
-    <ul>
+    <ol>
         {% for game in games %}
-            <li>{{ game.name }} - {{ game.downloads }} скачиваний</li>
+            <li>{{ game.name }} <br>
+                Скачиваний: {{ game.downloads }} <br>
+                Жанр: {{ game.genre }} <br>
+                Рейтинг: {{ game.rating }} <br>
+                Дата выхода: {{ game.date }} <br>
+                Платформа: {{ game.platform }} <br>
+                Издатель: {{ game.author }} <br>
+            </li>
         {% endfor %}
-    </ul>
+    </ol>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" class="astro-vvvwv3sm"></script>
 </body>
 </html>
+
+
+<!--CTRL + / комментировать-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
