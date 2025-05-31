@@ -1,7 +1,8 @@
-import requests, random
+from .models import Game
+import requests
 from bs4 import BeautifulSoup
 
-URL = 'https://torgamez.com/'
+URL = 'https://topgamez.online/'
 
 
 def parse(URL):
@@ -25,14 +26,17 @@ def parse(URL):
         # with open(f'data/{game_name}.html', 'w') as file:
         #     file.write(res.text)
 
-        with open(f'data/{game_name}.html') as file:
-            scr = file.read()
-        soup = BeautifulSoup(scr, 'lxml')
+        # with open(f'data/{game_name}.html') as file:
+        #     scr = file.read()
+        soup1 = BeautifulSoup(req.text, 'lxml')
 
-        data = soup.find('div', class_="site-content")
-        test = data.find('div', class_='rel212').find('h1')
-       # title = data.find('h2').text
-        print(type(test),test)
+        data = soup1.find('div', class_="site-content")
+
+
+
+        title = data.find('div', class_='ast-post-format- single-layout-1').find('h1').text
+        game = Game.objects.create(title=title)
+        game.save()
 
 
 

@@ -1,6 +1,6 @@
 import datetime
 
-from django.core.validators import MinValueValidator, MaxValueValidator
+
 from django.db import models
 
 
@@ -15,13 +15,14 @@ class IntegerRangeField(models.IntegerField):
 
 
 class Game(models.Model):
-    name = models.CharField(max_length=100, null=False, default='Game', primary_key=True)
-    downloads = models.IntegerField(null=False, default=0)
-    genre = models.CharField(max_length=20, null=False, default='Жанр не определён')
-    rating = IntegerRangeField(min_value=1, max_value=5)
-    date = models.DateField(null=False)
-    platform = models.CharField(max_length=20, default='ПК')
-    author = models.CharField(max_length=20, default='Нет' )
+    title = models.CharField(max_length=100, null=False, default='Game', primary_key=True)
+    genre = models.CharField(max_length=20, null=False, default='Genre is not defined')
+    date = models.IntegerField(null=False)
+    developer = models.CharField(max_length=100, default='Нет')
+    publisher = models.CharField(max_length=100, default='Нет')
+    description = models.TextField(default='The description is missing')
+
+
     def __str__(self):
         return self.name
 

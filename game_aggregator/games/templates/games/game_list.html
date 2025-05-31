@@ -36,13 +36,12 @@
     <h1>Топ игр по скачиваниям</h1>
     <ol>
         {% for game in games %}
-            <li>{{ game.name }} <br>
-                Скачиваний: {{ game.downloads }} <br>
+            <li><h3><strong>{{ game.title }}</strong></h3> <br>
                 Жанр: {{ game.genre }} <br>
-                Рейтинг: {{ game.rating }} <br>
                 Дата выхода: {{ game.date }} <br>
-                Платформа: {{ game.platform }} <br>
-                Издатель: {{ game.author }} <br>
+                Разработчик: {{ game.developer}} <br>
+                Издатель: {{ game.publisher }} <br>
+                Описание: {{ game.description}} <br>
             </li>
         {% endfor %}
     </ol>
@@ -51,7 +50,6 @@
 </html>
 
 
-<!--CTRL + / комментировать-->
 
 
 
