@@ -1,4 +1,4 @@
-from .models import Game
+from game_aggregator.games.models import Game
 import requests
 from bs4 import BeautifulSoup
 

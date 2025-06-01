@@ -1,12 +1,10 @@
 import re
 
-from .models import Game
+
 import requests
 from bs4 import BeautifulSoup
 
-
-
-
+from ..models import Game
 
 URL = 'https://torgamez.com/'
 
