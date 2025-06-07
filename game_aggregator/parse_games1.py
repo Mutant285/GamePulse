@@ -4,7 +4,6 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from ..models import Game
 
 URL = 'https://torgamez.com/'
 
@@ -39,8 +38,8 @@ def parse(URL):
         publisher = more_detail[3]
         description = data.find('div', id='adlink_other').find('p').text
 
-        game = Game.objects.create(title=title, genre=genre, date=date, developer=developer, publisher=publisher, description=description)
-        game.save()
+        # game = Game.objects.create(title=title, genre=genre, date=date, developer=developer, publisher=publisher, description=description)
+        # game.save()
 
 
 

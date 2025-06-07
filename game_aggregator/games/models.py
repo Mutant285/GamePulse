@@ -16,14 +16,14 @@ class IntegerRangeField(models.IntegerField):
 
 class Game(models.Model):
     title = models.CharField(max_length=100, null=False, default='Game', primary_key=True)
-    genre = models.CharField(max_length=20, null=False, default='Genre is not defined')
-    date = models.IntegerField(null=False)
+    genre = models.CharField(max_length=200, null=False, default='Genre is not defined')
+    date = models.CharField(max_length=30, null=False, default=datetime.datetime.now().year)
     developer = models.CharField(max_length=100, default='Нет')
     publisher = models.CharField(max_length=100, default='Нет')
     description = models.TextField(default='The description is missing')
 
 
     def __str__(self):
-        return self.name
+        return self.title
 
 

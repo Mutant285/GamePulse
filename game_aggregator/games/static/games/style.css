@@ -17,6 +17,7 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
+    text-align: center;
 }
 
 nav {
@@ -40,11 +41,16 @@ nav a:hover {
 }
 
 footer {
-    background: #35424a;
-    color: #ffffff;
+    background: #fafafa;
+    color: #fafafa;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.pad {
+    padding: 10px;
+
 }
